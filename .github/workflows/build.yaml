@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+  job_1:
+    name: Build on Windows
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          architecture: "x64"
+
+      - name: Install dependencies
+        run: pip install pygame
+
+      - name: Install pyinstaller
+        run: pip install pyinstaller
+
+      - name: Build Executable for Windows
+        run: pyinstaller -F --name square-reflect-windows main.py
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: square-reflect-windows
+          path: dist/square_reflect.exe
