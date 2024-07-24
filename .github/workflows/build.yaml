@@ -24,10 +24,10 @@ on:
         run: pip install pyinstaller
 
       - name: Build Executable for Windows
-        run: pyinstaller -F --name square-reflect-windows main.py
+        run: pyinstaller -F --name square_reflect main.py
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: square-reflect-windows
+          name: square_reflect
           path: dist/square_reflect.exe
