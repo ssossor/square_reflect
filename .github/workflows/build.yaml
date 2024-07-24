@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   workflow_call:
 
+jobs:
   job_1:
     name: Build on Windows
     runs-on: windows-latest
