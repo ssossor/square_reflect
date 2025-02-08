@@ -11,8 +11,8 @@ class Menu:
 
         menu = True
 
-        background = pygame.image.load("C:\\squarereflect\\assets\\menu.png").convert_alpha()
-        play = pygame.image.load("C:\\squarereflect\\assets\\play.png").convert_alpha()
+        background = pygame.image.load("./assets/menu.png").convert_alpha()
+        play = pygame.image.load("./assets/play.png").convert_alpha()
 
         while menu:
 
