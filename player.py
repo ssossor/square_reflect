@@ -5,7 +5,7 @@ class Player:
         self.position = startstate[0]
         self.direction = startstate[1]
         self.numberkeys = startstate[2]
-        self.texturepath = "C:\\squarereflect\\assets\\player.png"
+        self.texturepath = "./assets/player.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def move(self, board: list, boardsize: tuple[int, int]):
