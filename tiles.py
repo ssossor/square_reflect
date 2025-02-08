@@ -2,7 +2,7 @@ import pygame
 
 class Empty:
     def __init__(self) -> None:
-        self.texturepath = "C:\\squarereflect\\assets\\empty.png"
+        self.texturepath = "./assets/empty.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -17,7 +17,7 @@ class Empty:
     
 class Block:
     def __init__(self) -> None:
-        self.texturepath = "C:\\squarereflect\\assets\\block.png"
+        self.texturepath = "./assets/block.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -34,13 +34,13 @@ class Start:
     def __init__(self, direction: int) -> None:
         self.direction = direction
         if self.direction == 1:
-            self.texturepath = "C:\\squarereflect\\assets\\start_up.png"
+            self.texturepath = "./assets/start_up.png"
         if self.direction == 2:
-            self.texturepath = "C:\\squarereflect\\assets\\start_right.png"
+            self.texturepath = "./assets/start_right.png"
         if self.direction == 3:
-            self.texturepath = "C:\\squarereflect\\assets\\start_down.png"
+            self.texturepath = "./assets/start_down.png"
         if self.direction == 4:
-            self.texturepath = "C:\\squarereflect\\assets\\start_left.png"
+            self.texturepath = "./assets/start_left.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -76,13 +76,13 @@ class End:
     def __init__(self, direction: int) -> None:
         self.direction = direction
         if self.direction == 1:
-            self.texturepath = "C:\\squarereflect\\assets\\end_up.png"
+            self.texturepath = "./assets/end_up.png"
         if self.direction == 2:
-            self.texturepath = "C:\\squarereflect\\assets\\end_right.png"
+            self.texturepath = "./assets/end_right.png"
         if self.direction == 3:
-            self.texturepath = "C:\\squarereflect\\assets\\end_down.png"
+            self.texturepath = "./assets/end_down.png"
         if self.direction == 4:
-            self.texturepath = "C:\\squarereflect\\assets\\end_left.png"
+            self.texturepath = "./assets/end_left.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -106,13 +106,13 @@ class Angle:
     def __init__(self, direction) -> None:
         self.direction = direction
         if self.direction == 1:
-            self.texturepath = "C:\\squarereflect\\assets\\angle_top_left.png"
+            self.texturepath = "./assets/angle_top_left.png"
         if self.direction == 2:
-            self.texturepath = "C:\\squarereflect\\assets\\angle_top_right.png"
+            self.texturepath = "./assets/angle_top_right.png"
         if self.direction == 3:
-            self.texturepath = "C:\\squarereflect\\assets\\angle_bot_right.png"
+            self.texturepath = "./assets/angle_bot_right.png"
         if self.direction == 4:
-            self.texturepath = "C:\\squarereflect\\assets\\angle_bot_left.png"
+            self.texturepath = "./assets/angle_bot_left.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos) -> tuple[int, int, int]:
@@ -138,7 +138,7 @@ class Angle:
 class GhostBlock:
     def __init__(self) -> None:
         self.state = 0
-        self.texturepath = "C:\\squarereflect\\assets\\ghost_block.png"
+        self.texturepath = "./assets/ghost_block.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -147,7 +147,7 @@ class GhostBlock:
         numberkeys = state[2]
 
         if self.state == 0:
-            self.texturepath = "C:\\squarereflect\\assets\\block.png"
+            self.texturepath = "./assets/block.png"
             self.picture = pygame.image.load(self.texturepath).convert_alpha()
             self.state = 1
             return (nextpos, direction, numberkeys)
@@ -162,13 +162,13 @@ class GhostAngle:
         self.state = 0
         self.direction = direction
         if self.direction == 1:
-            self.texturepath = "C:\\squarereflect\\assets\\ghost_angle_top_left.png"
+            self.texturepath = "./assets/ghost_angle_top_left.png"
         if self.direction == 2:
-            self.texturepath = "C:\\squarereflect\\assets\\ghost_angle_top_right.png"
+            self.texturepath = "./assets/ghost_angle_top_right.png"
         if self.direction == 3:
-            self.texturepath = "C:\\squarereflect\\assets\\ghost_angle_bot_right.png"
+            self.texturepath = "./assets/ghost_angle_bot_right.png"
         if self.direction == 4:
-            self.texturepath = "C:\\squarereflect\\assets\\ghost_angle_bot_left.png"
+            self.texturepath = "./assets/ghost_angle_bot_left.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -178,13 +178,13 @@ class GhostAngle:
 
         if self.state == 0:
             if self.direction == 1:
-                self.texturepath = "C:\\squarereflect\\assets\\angle_top_left.png"
+                self.texturepath = "./assets/angle_top_left.png"
             if self.direction == 2:
-                self.texturepath = "C:\\squarereflect\\assets\\angle_top_right.png"
+                self.texturepath = "./assets/angle_top_right.png"
             if self.direction == 3:
-                self.texturepath = "C:\\squarereflect\\assets\\angle_bot_right.png"
+                self.texturepath = "./assets/angle_bot_right.png"
             if self.direction == 4:
-                self.texturepath = "C:\\squarereflect\\assets\\angle_bot_left.png"
+                self.texturepath = "./assets/angle_bot_left.png"
             self.picture = pygame.image.load(self.texturepath).convert_alpha()
             self.state = 1
             return (nextpos, direction, numberkeys)
@@ -207,7 +207,7 @@ class GhostAngle:
 class Key:
     def __init__(self) -> None:
         self.state = 0
-        self.texturepath = "C:\\squarereflect\\assets\\key.png"
+        self.texturepath = "./assets/key.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
 
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -217,7 +217,7 @@ class Key:
 
         if self.state == 0:
             self.state = 1
-            self.texturepath = "C:\\squarereflect\\assets\\empty.png"
+            self.texturepath = "./assets/empty.png"
             self.picture = pygame.image.load(self.texturepath).convert_alpha()
             return nextpos, direction, numberkeys + 1
 
@@ -229,7 +229,7 @@ class Key:
 class Lock:
     def __init__(self) -> None:
         self.state = 0
-        self.texturepath = "C:\\squarereflect\\assets\\lock.png"
+        self.texturepath = "./assets/lock.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -240,7 +240,7 @@ class Lock:
         if self.state == 0:
             if numberkeys > 0:
                 self.state = 1
-                self.texturepath = "C:\\squarereflect\\assets\\empty.png"
+                self.texturepath = "./assets/empty.png"
                 self.picture = pygame.image.load(self.texturepath).convert_alpha()
                 return nextpos, direction, numberkeys - 1
 
@@ -254,7 +254,7 @@ class Lock:
     
 class Kill:
     def __init__(self) -> None:
-        self.texturepath = "C:\\squarereflect\\assets\\kill.png"
+        self.texturepath = "./assets/kill.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
 
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -270,7 +270,7 @@ class Kill:
 class Portal:
     def __init__(self, letter: str, otherpos) -> None:
         self.otherpos = otherpos
-        self.texturepath = "C:\\squarereflect\\assets\\portal" + letter + ".png"
+        self.texturepath = "./assets/portal" + letter + ".png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:
@@ -285,7 +285,7 @@ class Portal:
 
 class Canon:
     def __init__(self) -> None:
-        self.texturepath = "C:\\squarereflect\\assets\\canon.png"
+        self.texturepath = "./assets/canon.png"
         self.picture = pygame.image.load(self.texturepath).convert_alpha()
     
     def apply(self, state: tuple[int, int, int], nextpos: int) -> tuple[int, int, int]:

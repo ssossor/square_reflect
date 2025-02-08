@@ -38,10 +38,11 @@ class Level:
                 self.tileslist.append(tiles.GhostAngle(int(self.data[i][1])))
             if self.data[i][0] == "p":
                 if self.data[i][1] in portal_memory:
-                    self.tileslist.insert(portal_memory[self.data[i][1]], tiles.Portal(self.data[i][1], i))
+                    self.tileslist[portal_memory[self.data[i][1]]] = tiles.Portal(self.data[i][1], i)
                     self.tileslist.append(tiles.Portal(self.data[i][1], portal_memory[self.data[i][1]]))
                 else:
                     portal_memory[self.data[i][1]] = i
+                    self.tileslist.append(tiles.Portal(self.data[i][1], '?'))
 
     def get_start_state(self) -> tuple[int, int]:
         for i in range(len(self.data)):

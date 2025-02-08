@@ -6,6 +6,7 @@ ghostblock 02
 key 03
 lock 04
 kill 05
+canon 06
 start top ?1
 start right ?2
 start down ?3
@@ -22,6 +23,7 @@ ghost angle top left a1
 ghost angle top right a2
 ghost angle bot right a3
 ghost angle bot left a4
+portal pa - pe
 
 # Direction
 

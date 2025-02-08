@@ -99,6 +99,16 @@ portal_test = ["00", "00", "00", "00", "00", "00", "00", "00", "00", "00",
                "00", "00", "00", "pb", "pb", "00", "00", "00", "00", "00",
                "00", "00", "00", "00", "00", "01", "00", "00", "00", "00"]
 
+bug_test = ["00", "00", "00", "00", "00", "00",
+            "00", "00", "00", "00", "00", "00",
+            "00", "00", "A1", "01", "00", "00",
+            "00", "00", "00", "00", "00", "00",
+            "00", "00", "00", "00", "00", "00",
+            "?2", "00", "00", "01", "00", "00"]
+
+editor_test = ['00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '00', '04', '00', '00', '00', '00', '00', '?3', '!4', '03', '00', '00', '00', '00', '00', '00', '01', '00', '00', '00', '00', '04', '00', '03', '00', '02', '00', '00', '00', '00', '00', '00', '00', 'A3', '00', '00', '03', '00', '00', '00', '00', '00', '00', '00', '05', 'A4', '00', '00', '00', '00', '00', '00', '00', 'A1', 'A2', '00', '04', '00', '00', '00', '00', '00', '04', 'a4', 'A3', '00', '00', '01', '02', '00', '00', '00', '00', '00', '00', 'A4', '00', '00', '00', '01', '02', '00', '00', '04', '00']
+
+
 pygame.init()
 pygame.font.init()
 
@@ -113,8 +123,12 @@ test_level6 = level.Level(6, "Impossible 2", 15, 10, level6_data)
 test_level7 = level.Level(69, "uwu", 15, 10, level7_data)
 test_level8 = level.Level(8, "lomi", 14, 11, level_data_8)
 test_level9 = level.Level(9, "portal test", 10, 10, portal_test)
+test_level10 = level.Level(10, "bug test", 6, 6, bug_test)
+test_level11 = level.Level(11, "Impossible", 10, 10, editor_test)
 
-my_menu = menu.Menu([test_level1, test_level2, test_level3, test_level4, test_level5, test_level6, test_level7, test_level8, test_level9, level1, level2, level3])
+my_menu = menu.Menu([level1, level2, level3, level4, level5, level6, level7, level8, level9, level10])
+
+#menu_test = menu.Menu([test_level10])
 
 pygame.display.set_caption('Square Reflect')
 pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_CROSSHAIR)
